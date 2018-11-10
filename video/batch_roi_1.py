@@ -21,7 +21,7 @@ import pickle
 import os
 
 # Set options here
-redo_option = True
+redo_option = False
 
 
 # DO NOT ALTER CODE BELOW THIS LINE

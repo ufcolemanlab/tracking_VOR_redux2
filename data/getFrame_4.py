@@ -31,7 +31,7 @@ def get_frame(number):
     for i in range(number):
         (ret, img) = cap.read()
         if ret == False:
-            print "invalid frame"
+            print ("invalid frame")
             print(str(number))
     return img
 
@@ -68,9 +68,9 @@ def main():
     filename_matlist = glob(matName)
     
     # bug check1
-    print dirname
-    print filename_vidlist
-    print filename_matlist
+    print (dirname)
+    print (filename_vidlist)
+    print (filename_matlist)
     
     saveimages = False
     
@@ -85,12 +85,12 @@ def main():
             saveimages = True
         elif len(stimFrameList) != 10:
             stimFrameList = [7487, 10070, 10823, 13405, 14158, 16741, 17493, 20076, 20829, 23411]
-            print "Unexpected # of stim frames. Using: " + str(stimFrameList)
+            print ("Unexpected # of stim frames. Using: " + str(stimFrameList))
             saveimages = True
         
         if saveimages:
             for i in range(len(stimFrameList)):
-                print filename_vid
+                print (filename_vid)
                 cap = cv2.VideoCapture(filename_vid)
                 show_onset(stimFrameList[i],filename_vid)
                 print(str(stimFrameList[i]))
