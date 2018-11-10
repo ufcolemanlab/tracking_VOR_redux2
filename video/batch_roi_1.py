@@ -21,7 +21,12 @@ import pickle
 import os
 
 # Set options here
-redo_option = False
+# query and user entry
+redo_option_query = raw_input("Is this a redo? (y or n): ")
+if redo_option_query is 'n':
+    redo_option = False
+if redo_option_query is 'y':
+    redo_option = True
 
 
 # DO NOT ALTER CODE BELOW THIS LINE
